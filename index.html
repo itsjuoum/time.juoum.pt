@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proof of Time</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>PROOF OF TIME</h1>
+            <h2>time.juoum.pt</h2>
+        </header>
+
+        <main>
+            <section class="clock-section">
+                <div id="utc-clock" class="clock">LOADING...</div>
+                <div class="label">UTC TIME</div>
+            </section>
+
+            <section class="blockchain-section">
+                <h2>BITCOIN BLOCKCHAIN</h2>
+                <div class="table-header">
+                    <span>HEIGHT</span>
+                    <span>TIME</span>
+                    <span>HASH</span>
+                </div>
+                <div id="block-list" class="block-list">
+                    <div class="loading">Connecting to Mempool...</div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <a href="https://github.com/itsjuoum/time.juoum.pt" target="_blank">GitHub</a>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

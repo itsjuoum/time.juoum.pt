@@ -1,0 +1,190 @@
+:root {
+    --bg-color: #050505;
+    --text-color: #e0e0e0;
+    --accent-color: #00ff41;
+    --secondary-color: #444;
+    --font-family: 'JetBrains Mono', monospace;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+header h1 {
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    opacity: 0.7;
+}
+
+header h2 {
+    font-size: 1rem;
+    letter-spacing: 0.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+    opacity: 0.7;
+}
+
+/* Clock Styles */
+.clock-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.clock {
+    font-size: 6rem;
+    font-weight: 700;
+    color: var(--text-color);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+}
+
+.label {
+    font-size: 1rem;
+    color: var(--accent-color);
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+}
+
+/* Blockchain Styles */
+.blockchain-section {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.blockchain-section h2 {
+    font-size: 1rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    letter-spacing: 0.2rem;
+    text-align: center;
+}
+
+.table-header {
+    display: grid;
+    grid-template-columns: 120px 150px 1fr;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.block-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.block-item {
+    display: grid;
+    grid-template-columns: 120px 150px 1fr;
+    padding: 0.75rem 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 4px;
+    transition: background 0.3s ease;
+    animation: slideIn 0.5s ease-out;
+}
+
+.block-item:first-child {
+    background: rgba(0, 255, 65, 0.05);
+    border-left: 2px solid var(--accent-color);
+}
+
+.block-height {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.block-hash {
+    color: var(--text-color);
+    opacity: 0.8;
+    overflow: visible;
+    white-space: normal;
+    word-break: break-all;
+    font-size: 0.8rem;
+    line-height: 1.2;
+}
+
+.loading {
+    text-align: center;
+    color: var(--secondary-color);
+    padding: 2rem;
+    font-style: italic;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .clock {
+        font-size: 3.5rem;
+    }
+
+    .block-hash {
+        font-size: 0.8rem;
+    }
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    padding: 2rem;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+footer:hover {
+    opacity: 1;
+}
+
+footer a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+footer a:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
