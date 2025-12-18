@@ -7,8 +7,15 @@ function updateClock() {
     const seconds = String(now.getUTCSeconds()).padStart(2, '0');
     const milliseconds = String(now.getUTCMilliseconds()).padStart(3, '0');
 
+    // Format Date: DD-MM-YYYY
+    const day = String(now.getUTCDate()).padStart(2, '0');
+    const month = String(now.getUTCMonth() + 1).padStart(2, '0');
+    const year = now.getUTCFullYear();
+    const dateString = `${day}-${month}-${year}`;
+
     const timeString = `${hours}:${minutes}:${seconds}.${milliseconds}`;
 
+    document.getElementById('utc-date').textContent = dateString;
     document.getElementById('utc-clock').textContent = timeString;
 
     requestAnimationFrame(updateClock);
